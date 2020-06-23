@@ -1,6 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+// HERE
+// import helloCommon from './commonjs/hello'
+import helloEsm from './esm/hello'
+
+// console.log('helloCommon', helloCommon)
+console.log('helloEsm', helloEsm)
 
 interface AppProps {}
 
