@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import { pick } from 'lodash';
+import { Button } from 'antd';
+import 'antd/dist/antd.css';
 interface AppProps {}
 
 function App({}: AppProps) {
@@ -13,8 +15,12 @@ function App({}: AppProps) {
     return () => clearTimeout(timer);
   }, [count, setCount]);
   // Return the App component.
+  useEffect(() => {
+    console.log(pick);
+  }, []);
   return (
     <div className="App">
+      <Button type="primary">Hello</Button>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
