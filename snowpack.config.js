@@ -4,6 +4,19 @@ module.exports = {
     public: { url: '/', static: true },
     src: { url: '/dist' },
   },
+  alias: {
+    'antd/dist/antd.css': 'antd/dist/antd.css',
+    'antd': 'antd/dist/antd.min.js',
+  },
+  rollup: {
+    plugins: [
+      require('@rollup/plugin-alias')({
+        entries: [
+          { find: /^antd$/, replacement: 'antd/dist/antd.min.js' },
+        ],
+      }),
+    ],
+  },
   plugins: [
     '@snowpack/plugin-react-refresh',
     '@snowpack/plugin-dotenv',

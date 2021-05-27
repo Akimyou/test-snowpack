@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { pick } from 'lodash';
-import { Button } from 'antd';
+import Antd from 'antd';
 import 'antd/dist/antd.css';
 interface AppProps {}
 
@@ -20,7 +20,7 @@ function App({}: AppProps) {
   }, []);
   return (
     <div className="App">
-      <Button type="primary">Hello</Button>
+      <Antd.Button type="primary">Hello</Antd.Button>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
